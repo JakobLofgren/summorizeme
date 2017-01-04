@@ -19,7 +19,9 @@ The bot depends on these settings:
 ## How it works
 
 Somebody tweets at the bot with an article. (Currently just supporting one article per tweet!)
+
 The bot posts a link to SMMRY to summorize the article, takes the returned text and generates a picture containing the text.
+
 The bot then uploads the picture to twitter and responds to the tweet with said picture.
 
 
