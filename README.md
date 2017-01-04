@@ -25,3 +25,9 @@ The bot posts a link to SMMRY to summorize the article, takes the returned text 
 The bot then uploads the picture to twitter and responds to the tweet with said picture.
 
 
+# What I learned:
+
+Building "bots" is suprisingly easy, with the easy to plug in modules there are. Along with cool API's such as SMMRY.
+
+I also ran into one a problem I've never run into before. Storing numbers larger than whatever the limit is. 
+I originally stored my own ID in a variable and checked if tweets tweeted @ the bot were it's own tweets. Unfortunately the large number didn't work and it spammed itself with several messages before I noticed. Luckily, Twitter also sends out id_str for lazy people like me.
