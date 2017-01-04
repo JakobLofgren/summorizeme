@@ -1,0 +1,21 @@
+{
+  "name": "summorizeme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cls && node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.15.3",
+    "dotenv": "^2.0.0",
+    "jimp": "^0.2.27",
+    "twitter": "^1.7.0",
+    "winston": "^2.3.0"
+  }
+}
