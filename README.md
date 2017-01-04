@@ -13,7 +13,7 @@ The bot depends on these settings:
 | consumer_secret     | twitter consumer secret                |
 | access_token_key    | twitter access token key               |
 | access_token_secret | twitter access token secret            |
-| SMMRY_access_token  | (SMMRY)[http://smmry.com] access token |
+| SMMRY_access_token  | [SMMRY](http://smmry.com) access token |
 
 
 ## How it works
