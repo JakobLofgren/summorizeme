@@ -4,7 +4,7 @@ A twitter bot for summorizing articles. Using [Twitter](https://www.npmjs.com/pa
 
 ## Usage
 
-If you want to run this bot, you need to set process.env variables.
+If you want to run this bot, __you need to set these process.env variables__.
 I use [dotenv](https://www.npmjs.com/package/dotenv), but pick your poision.
 The bot depends on these settings:
 
