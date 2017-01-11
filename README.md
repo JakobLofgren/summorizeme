@@ -1,10 +1,11 @@
 # summorizeme
 
-A twitter bot for summorizing articles.
+A twitter bot for summorizing articles. Using [Twitter](https://www.npmjs.com/package/twitter) and [SMMRY](http://smmry.com).
 
 ## Usage
 
 If you want to run this bot, you need to set process.env variables.
+I use [dotenv](https://www.npmjs.com/package/dotenv), but pick your poision.
 The bot depends on these settings:
 
 | process.env.X       | expected values                        |
@@ -18,16 +19,18 @@ The bot depends on these settings:
 
 ## How it works
 
-Somebody tweets at the bot with an article. (Currently just supporting one article per tweet!)
+1. Person tweets @ the bot, bot sends the article to SMMRY API
+2. SMMRY returns a summorized version, bot chucks it as text onto an image it created via [Jimp](https://www.npmjs.com/package/jimp)
+3. Bot uploads image to Twitter, then tweets back with image and likes the original tweet.
 
-The bot posts a link to SMMRY to summorize the article, takes the returned text and generates a picture containing the text.
+# Side note:
 
-The bot then uploads the picture to twitter and responds to the tweet with said picture.
+### What I learned:
+
+1. Building bots is very easy, when other people have already done the hard work. I just fused the wires togheter.
+
+2. I ran into the too big number - problem, JavaScript has. Luckily, Twitter provides strings for large numbers.
+
+3. Documentation can really screw you over. I got an error code from Twitter's API that the documentation said meant: "Suspended". Luckily, I did not get suspended and they had just made an routing error.
 
 
-# What I learned:
-
-Building "bots" is suprisingly easy, with the easy to plug in modules there are. Along with cool API's such as SMMRY.
-
-I also ran into one a problem I've never run into before. Storing numbers larger than whatever the limit is. 
-I originally stored my own ID in a variable and checked if tweets tweeted @ the bot were it's own tweets. Unfortunately the large number didn't work and it spammed itself with several messages before I noticed. Luckily, Twitter also sends out id_str for lazy people like me.

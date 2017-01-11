@@ -1,5 +1,6 @@
 const axios = require("axios")
 ,	Jimp = require("jimp")
+,	fs = require("fs")
 
 function summorizePage ( page ) {
 	return axios.post(`http://api.smmry.com/&SM_API_KEY=${process.env.SMMRY_access_token}&SM_URL=${page}`)
@@ -19,7 +20,7 @@ function generatePicture ( text,id ) {
 					.print( font, 10, 10, text, 1200 )
 					.quality( 60 )
 					.write( `${id}.jpg` )
-				resolve()
+				resolve(`${id}.jpg`)
 			})
 			.catch( err => {
 				reject( err )
@@ -28,7 +29,17 @@ function generatePicture ( text,id ) {
 	})
 }
 
+function readFileAsync(file){
+	return new Promise((resolve,reject) => {
+		fs.readFile(file, (err, img) => {
+			if(err) reject(err)
+			resolve(img)
+		})
+	})
+}
+
 module.exports = {
 	summorizePage,
-	generatePicture
+	generatePicture,
+	readFileAsync
 }
