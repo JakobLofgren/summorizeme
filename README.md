@@ -10,11 +10,12 @@ The bot depends on these settings:
 
 | process.env.X       | expected values                        |
 |---------------------|----------------------------------------|
-| consumer_key        | twitter consumer key                   |
-| consumer_secret     | twitter consumer secret                |
-| access_token_key    | twitter access token key               |
-| access_token_secret | twitter access token secret            |
+| consumer_key        | Twitter consumer key                   |
+| consumer_secret     | Twitter consumer secret                |
+| access_token_key    | Twitter access token key               |
+| access_token_secret | Twitter access token secret            |
 | SMMRY_access_token  | [SMMRY](http://smmry.com) access token |
+| my_id               | Your Twitter-ID.                       |
 
 
 ## How it works

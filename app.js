@@ -20,7 +20,7 @@ let pics = []
 
 T.stream("user", (stream) => {
 	stream.on("data", (event) => {
-		if(event.user.id_str === "816221605282062336")return
+		if(event.user.id_str === process.env.my_id) return
 		winston.debug(event)
 		if(event.entities.urls.length && event.entities.urls.length < 2){
 			summorizePage(event.entities.urls[0].expanded_url)
